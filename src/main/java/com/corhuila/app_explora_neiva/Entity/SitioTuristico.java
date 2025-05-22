@@ -8,8 +8,7 @@ import jakarta.persistence.Table;
 @Table(name = "sitio_turistico")
 public class SitioTuristico extends ABaseEntity {
 
-    @Column(name = "code", nullable = false, length = 20)
-    private String code;
+
 
     @Column(name = "title", nullable = false, length = 100, unique = true)
     private String title;
@@ -34,14 +33,6 @@ public class SitioTuristico extends ABaseEntity {
 
     @Column(name = "contact", nullable = false, length = 50)
     private String contact;
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
 
     public String getTitle() {
         return title;

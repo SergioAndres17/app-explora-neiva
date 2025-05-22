@@ -37,7 +37,7 @@ public class SecurityConfig {
         @Bean
         public CorsConfigurationSource corsConfigurationSource() {
                 CorsConfiguration config = new CorsConfiguration();
-                config.setAllowedOrigins(Arrays.asList("http://localhost:8100")); // URL de Ionic
+                config.setAllowedOriginPatterns(Arrays.asList("*"));  // URL de Ionic
                 config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
                 config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
                 config.setAllowCredentials(true); // Si usas cookies o sesiones
